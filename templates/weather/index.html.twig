@@ -1,0 +1,89 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="header">
+        <b>Welcome on my weather forecast website! Click on map to add forecast</b><br>
+        <a class="btn" href="{{ path('app_weather_forecasts', {'currentPage': 1}) }}">Go to record list</a>
+        <a class="btn" href="{{ path('app_weather') }}">Refresh map to default</a>
+    </div>
+    <div id="map"></div>
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7TqK1SThyAMUmPGEfTUrU0dny-_bPa6U&callback=addRecord"></script>
+
+    <div class="modal fade" id="NewWeatherModal" tabindex="-1" role="dialog" aria-labelledby="NewWeatherModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="NewWeatherModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary close">Great!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        #map {
+            height: 550px; width: 100%;
+        }
+        #header {
+            padding: 5px; text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        
+        // w wiekszej ilości czasu warto by przenieść metodu js do osobnego pliku a tutaj tylko przenieść tagi script //
+        
+        function initMap() {
+            debugger
+            let map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: {lat: 50.0, lng: 19.0},
+            });
+            map.addListener("click", (mapsMouseEvent) => { handleRecordAdd(mapsMouseEvent) });
+        }
+
+        function handleRecordAdd(mapsMouseEvent) {
+            const coordinates = mapsMouseEvent.latLng.toJSON();
+            $.ajax({
+                type: "POST",
+                url: "{{ path('app_add_weather_forecast') }}",
+                data: JSON.stringify(coordinates),
+                dataType: 'json',
+                callback: (response) => {
+                    if (response.error) {
+                        alert(response.error_msg);
+                        return false;
+                    } 
+                    if (response.new_record_data === undefined || response.new_record_data === NULL) {
+                        alert("No data has returned");
+                        return false;
+                    }
+                    $('#NewWeatherModal').modal('show');
+                    $("#NewWeatherModal .close").click(() => {$('#NewWeatherModal').modal('hide')})
+                },
+            })
+        }
+        window.initMap = initMap;
+    </script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7TqK1SThyAMUmPGEfTUrU0dny-_bPa6U&callback=initMap"
+      defer
+    ></script>
+{% endblock %}
+
+

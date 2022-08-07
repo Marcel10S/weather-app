@@ -62,6 +62,72 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
+'App%5CController%5CWeatherController' => 0,
+'[C]App%5CController%5CWeatherController' => 1,
+'App%5CController%5CWeatherController%23index' => 2,
+'[C]App%5CController%5CWeatherController%23index' => 1,
+'App%5CController%5CWeatherController%23weatherList' => 3,
+'[C]App%5CController%5CWeatherController%23weatherList' => 1,
+'App%5CEntity%5CWeatherForecast' => 4,
+'[C]App%5CEntity%5CWeatherForecast' => 1,
+'App%5CEntity%5CWeatherForecast%23getId' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getId' => 1,
+'App%5CEntity%5CWeatherForecast%23getTemperature' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getTemperature' => 1,
+'App%5CEntity%5CWeatherForecast%23setTemperature' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setTemperature' => 1,
+'App%5CEntity%5CWeatherForecast%23getCloudyStatus' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getCloudyStatus' => 1,
+'App%5CEntity%5CWeatherForecast%23setCloudyStatus' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setCloudyStatus' => 1,
+'App%5CEntity%5CWeatherForecast%23getWind' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getWind' => 1,
+'App%5CEntity%5CWeatherForecast%23setWind' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setWind' => 1,
+'App%5CEntity%5CWeatherForecast%23getDescriprion' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getDescriprion' => 1,
+'App%5CEntity%5CWeatherForecast%23setDescriprion' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setDescriprion' => 1,
+'App%5CEntity%5CWeatherForecast%23getLat' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getLat' => 1,
+'App%5CEntity%5CWeatherForecast%23setLat' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setLat' => 1,
+'App%5CEntity%5CWeatherForecast%23getIng' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getIng' => 1,
+'App%5CEntity%5CWeatherForecast%23setIng' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setIng' => 1,
+'App%5CEntity%5CWeatherForecast%23getCityName' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getCityName' => 1,
+'App%5CEntity%5CWeatherForecast%23setCityName' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setCityName' => 1,
+'App%5CEntity%5CWeatherForecast%23getDateEntered' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getDateEntered' => 1,
+'App%5CEntity%5CWeatherForecast%23setDateEntered' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setDateEntered' => 1,
+'App%5CEntity%5CWeatherForecast%23getExecuteTime' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23getExecuteTime' => 1,
+'App%5CEntity%5CWeatherForecast%23setExecuteTime' => 0,
+'[C]App%5CEntity%5CWeatherForecast%23setExecuteTime' => 1,
+'App%5CEntity%5CWeatherForecast%24id' => 5,
+'[C]App%5CEntity%5CWeatherForecast%24id' => 1,
+'App%5CEntity%5CWeatherForecast%24temperature' => 6,
+'[C]App%5CEntity%5CWeatherForecast%24temperature' => 1,
+'App%5CEntity%5CWeatherForecast%24cloudy' => 7,
+'[C]App%5CEntity%5CWeatherForecast%24cloudy' => 1,
+'App%5CEntity%5CWeatherForecast%24wind' => 7,
+'[C]App%5CEntity%5CWeatherForecast%24wind' => 1,
+'App%5CEntity%5CWeatherForecast%24descriprion' => 8,
+'[C]App%5CEntity%5CWeatherForecast%24descriprion' => 1,
+'App%5CEntity%5CWeatherForecast%24lat' => 9,
+'[C]App%5CEntity%5CWeatherForecast%24lat' => 1,
+'App%5CEntity%5CWeatherForecast%24ing' => 9,
+'[C]App%5CEntity%5CWeatherForecast%24ing' => 1,
+'App%5CEntity%5CWeatherForecast%24city_name' => 10,
+'[C]App%5CEntity%5CWeatherForecast%24city_name' => 1,
+'App%5CEntity%5CWeatherForecast%24date_entered' => 11,
+'[C]App%5CEntity%5CWeatherForecast%24date_entered' => 1,
+'App%5CEntity%5CWeatherForecast%24execute_time' => 12,
+'[C]App%5CEntity%5CWeatherForecast%24execute_time' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 0,
 '[C]Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23__construct' => 0,
@@ -530,6 +596,293 @@ return [[
 ], [
 
 0 => [],
-1 => 1659879169,
+1 => 1659909815,
+2 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/weatherAdd',
+                ],
+                'name' => [
+                    'app_weather',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+3 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/weatherList/{page}',
+                ],
+                'name' => [
+                    'app_weather_list',
+                ],
+                'requirements' => [
+                    [
+                        'page' => '\\d+',
+                    ],
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+4 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'repositoryClass' => [
+                    'App\\Repository\\WeatherForecastRepository',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+5 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Id'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Id')),
+            clone ($p['Doctrine\\ORM\\Mapping\\GeneratedValue'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\GeneratedValue')),
+            clone ($p['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    2 => 'integer',
+                ],
+                'precision' => [
+                    2 => null,
+                ],
+                'scale' => [
+                    2 => null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+            $o[2],
+        ],
+        []
+    );
+},
+6 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    'string',
+                ],
+                'length' => [
+                    25,
+                ],
+                'precision' => [
+                    null,
+                ],
+                'scale' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+7 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    'string',
+                ],
+                'length' => [
+                    150,
+                ],
+                'precision' => [
+                    null,
+                ],
+                'scale' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+8 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    'string',
+                ],
+                'length' => [
+                    255,
+                ],
+                'precision' => [
+                    null,
+                ],
+                'scale' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+9 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    'float',
+                ],
+                'precision' => [
+                    null,
+                ],
+                'scale' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+10 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    'string',
+                ],
+                'length' => [
+                    255,
+                ],
+                'precision' => [
+                    null,
+                ],
+                'scale' => [
+                    null,
+                ],
+                'nullable' => [
+                    true,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+11 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    'datetime',
+                ],
+                'precision' => [
+                    null,
+                ],
+                'scale' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+12 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'type' => [
+                    'dateinterval',
+                ],
+                'precision' => [
+                    null,
+                ],
+                'scale' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
 
 ]];

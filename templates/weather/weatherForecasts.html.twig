@@ -1,0 +1,58 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="weather_list">
+        {% if currentPage > 1 %}
+            <a class="btn" href="{{ path('app_weather_forecasts', {'currentPage': currentPage - 1}) }}">Newer records</a>
+        {% endif %}
+        {% if pagesCount > currentPage %}
+            <a class="btn" href="{{ path('app_weather_forecasts', {'currentPage': currentPage + 1}) }}">Older records</a>
+        {% endif %}
+        <a class="btn" href="{{ path('app_weather') }}">Return to main page</a>
+        <table class="table table-striped" id="weather_list">
+        <thead>
+            <tr>
+            <th scope="col">Date entered</th>
+            <th scope="col">Temperature</th>
+            <th scope="col">Cloudy</th>
+            <th scope="col">Wind</th>
+            <th scope="col">City name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for weather in weatherData %}
+                <tr>
+                    <td>{{ weather.date_entered }}</td>
+                    <td>{{ weather.temperature }}</td>
+                    <td>{{ weather.cloudy }}</td>
+                    <td>{{ weather.wind }}</td>
+                    <td>{{ weather.city_name }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+    <div class="weather_summary">
+        {# <table class="table table-striped" id="weather_summary">
+        <thead>
+            <tr>
+            <th scope="col">Max temperature</th>
+            <th scope="col">Min temperature</th>
+            <th scope="col">Avg temperature</th>
+            <th scope="col">Most search city</th>
+            <th scope="col">Search count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th scope="col">{{ weatherSummaryData.max_temperature }}</th>
+            <th scope="col">{{ weatherSummaryData.min_temperature }}</th>
+            <th scope="col">{{ weatherSummaryData.avg_temperature }}</th>
+            <th scope="col">{{ weatherSummaryData.most_search_city }}</th>
+            <th scope="col">{{ weatherSummaryData.search_count }}</th>
+        </tbody>
+        </table> #}
+    </div>
+</div>
+{% endblock %}

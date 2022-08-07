@@ -8,6 +8,9 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/weatherAdd' => [[['_route' => 'app_weather', '_controller' => 'App\\Controller\\WeatherController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'app_add_weather_forecast', '_controller' => 'App\\Controller\\WeatherController::addRecord'], null, null, null, false, false, null]],
+        '/weatherForecasts' => [[['_route' => 'app_weather_forecasts', '_controller' => 'App\\Controller\\WeatherController::weatherForecasts'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
